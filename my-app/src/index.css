@@ -1,0 +1,10 @@
+#root {
+    width: 100vh;
+    height: 100vh;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
