@@ -1,5 +1,4 @@
-
-
+<img src="./image/tela_login.png"> 
   
   <p align="center">
     <a href="#-tecnologias">Tecnologias</a>
@@ -38,6 +37,3 @@ Uma página de Login simples.
   By Victor Rosa 
   </body>
   </html>
-  
-  
-  
