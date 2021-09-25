@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import { AuthContext } from '../../contexts/auth';
+
+import {  useAuth } from '../../contexts/auth';
 
 import logo from '../../assets/logo.png';
 
@@ -9,10 +9,9 @@ import {Container, Input, Logo, Button} from './styles'
 
 function SignIn(){
 
-    const { signed, loading, user, signIn } = useContext(AuthContext);
+    const { loading, signIn } = useAuth();
 
-    console.log({signed})
-    console.log({loading})
+    
 
     function handleSignIn(){
         signIn()

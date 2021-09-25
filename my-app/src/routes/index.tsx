@@ -1,19 +1,22 @@
-import { Switch, Route } from "react-router";
+
+
+import { Switch} from "react-router";
+import { useAuth } from "../contexts/auth";
+
+import Dashboard from "../pages/Dashboard";
 
 import SignIn from '../pages/SignIn'
+import CustomRoute from "./routes";
+ 
 
 export default function Routes(){
 
+    const {signed} = useAuth()
+
     return(
-        <Switch> 
-            <Route path="/login" component={SignIn} exact/>
-            <Route path="/" component={SignIn}/>
-            <Route/>
-            <Route/>
-            <Route/>
-            <Route/>
-            <Route/>
-            <Route/>
+        <Switch>  
+            <CustomRoute path="/dashboard" component={Dashboard} exact isPrivate={true} signed={signed}/>
+            <CustomRoute path="/" component={SignIn} isPrivate={false} signed={signed}/>
         </Switch>
     )
 }
